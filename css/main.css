@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: paralucent;
+  color: #111111;
+}
+
+h1 {
+  font-size: 7rem;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+a:hover {
+  color: whitesmoke;
+}
+
+.container {
+  padding: 0 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 10rem;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  display: block;
+  margin-top: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-light {
+  color: #111111;
+  background-color: white;
+  border: 0.1rem solid whitesmoke;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+.btn-light:hover {
+  color: white;
+  background-color: #111111;
+}
+
+.btn-dark {
+  color: whitesmoke;
+  background-color: #111111;
+  border: 0.1rem solid #111111;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+.btn-dark:hover {
+  color: #111111;
+  background-color: whitesmoke;
+}
+
+header {
+  padding: 5rem 0;
+}
+header .flex-container {
+  justify-content: space-between;
+}
+header .brand {
+  color: #111111;
+  font-size: 3rem;
+  font-weight: 800;
+}
+header .nav-search {
+  display: flex;
+  align-items: center;
+}
+header .nav-search-input {
+  width: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+}
+header .nav-search-input.visible {
+  width: 15rem;
+  padding: 1rem;
+  border-bottom: 0.2rem solid;
+  margin-left: 1rem;
+}
+header .nav-search-input.visible:focus {
+  outline: 0;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+.movies {
+  justify-content: space-between;
+}
+
+.movie {
+  position: relative;
+  color: white;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 576px) {
+  .movie {
+    flex-basis: 45%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .movie {
+    flex-basis: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .movie {
+    flex-basis: 18%;
+  }
+}
+.movie .movie-details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #111111 100%);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.movie-genre {
+  display: inline-block;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.movie-genre:not(:last-child)::after {
+  content: ",";
+}
+
+.movie-wrapper {
+  border-top: 0.1rem solid whitesmoke;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+  align-items: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .movie-wrapper .movie-left-wrapper {
+    flex-basis: 30%;
+    margin-right: 5rem;
+  }
+}
+.movie-wrapper .movie-left-wrapper img {
+  vertical-align: bottom;
+}
+.movie-wrapper .movie-right-wrapper {
+  flex-grow: 1;
+  flex-basis: 60%;
+  padding-top: 5rem;
+  color: #111111;
+}
+.movie-wrapper .movie-right-wrapper .movie-year {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.movie-wrapper .movie-right-wrapper p {
+  line-height: 3rem;
+  margin: 5rem 0;
+}
+
+.search h1 {
+  font-size: 4.8rem;
+  margin-bottom: 4rem;
+}
+.search .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.search .item img {
+  width: 15rem;
+}
+@media screen and (min-width: 768px) {
+  .search .item img {
+    width: 25rem;
+  }
+}
+.search .movie-details {
+  width: calc(95% - 15rem);
+}
+@media screen and (min-width: 768px) {
+  .search .movie-details {
+    width: calc(98% - 25rem);
+  }
+}
+.search .movie-details a {
+  color: #111111;
+}
+@media screen and (min-width: 768px) {
+  .search .movie-details a {
+    font-size: 3.6rem;
+  }
+}
+
+.pagination {
+  padding: 2rem 0;
+  text-align: center;
+}
+.pagination .pagination-item {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+.pagination .pagination-item a {
+  color: #111111;
+  border: 0.2rem solid #111111;
+  padding: 1.5rem 2rem;
+}
+.pagination .pagination-item.active a {
+  color: #c5c5c5;
+  border-color: #c5c5c5;
+  cursor: default;
+}
+.pagination .pagination-item:not(.active) a:hover {
+  background-color: #111111;
+  color: #f2f0f1;
+}
+
+/*# sourceMappingURL=main.css.map */
